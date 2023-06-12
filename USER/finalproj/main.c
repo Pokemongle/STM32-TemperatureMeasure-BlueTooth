@@ -31,8 +31,8 @@ int main(void){
 				}else{
 						printf("\r\n Measured T: %.2f¡æ \r\n", temper);
 				}
-				Current_Temp= (1.43-ADC_ConvertedValue*3.3/4096)*1000 / 4.3+ 23 ;
-				//Current_Temp=((double)V25-(double)ADC_ConvertedValue)/(double)Avg_Slope+23;
+				//Current_Temp= (1.43-ADC_ConvertedValue*3.3/4096)*1000 / 4.3+ 23 ;
+				Current_Temp=((double)V25-(double)ADC_ConvertedValue)/(double)Avg_Slope+23;
 				printf("\r\n Real T= %.2f ¡æ \r\n", Current_Temp);
 				printf("\r\n --------------------- \r\n");
 				Delay_ms(500);
